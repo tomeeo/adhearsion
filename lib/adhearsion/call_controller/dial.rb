@@ -370,7 +370,7 @@ module Adhearsion
 
           @cleanup_controller = @options.delete :cleanup
           @cleanup_metadata = @options.delete :cleanup_metadata || @confirmation_metadata
-          @skip_cleanup = false
+          @skip_cleanup = @options.delete :skip_cleanup || false
         end
 
         def pre_join_tasks(call)
